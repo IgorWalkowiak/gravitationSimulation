@@ -1,12 +1,16 @@
+import math
 
 class Vector:
-    __init__(self):
+    def __init__(self):
         self.x = 0
         self.y = 0
 
-    __init__(self, x, y):
+    def __init__(self, x, y):
         self.x = x
         self.y = y
 
-    __add__(self, o):
+    def __add__(self, o):
         return Vector(self.x + o.x, self.y + o.y)
+
+    def getLength(self):
+        return math.sqrt(self.x*self.x + self.y*self.y)
